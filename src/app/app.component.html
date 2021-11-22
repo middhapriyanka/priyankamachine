@@ -1,0 +1,41 @@
+<h1>Motor Vehicle Collisions - Crashes</h1>
+
+<div class="container">
+  <!-- Card deck -->
+  <div
+    class="card-deck row"
+    id="motor-vehicle-card"
+    *ngFor="let item of items; let i = index"
+  >
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <!-- Card -->
+      <!-- Cards should be created using a list iterator-->
+      <div class="card" (click)="navigate(i)">
+        <!--Card content-->
+        <div class="card-body">
+          <a class="card-block stretched-link text-decoration-none" href></a>
+          <!--Title-->
+          <h4 class="card-title">Motor Vehicle Crash Detail {{ i + 1 }}</h4>
+          <!--Text-->
+          <p class="card-text">
+            <strong>Vehicle Type Code 1:</strong>
+            <span id="vehicle-type-code-1"></span>
+          </p>
+          <p class="card-text">
+            <strong>Vehicle Type Code 2: </strong>
+            <span id="vehicle-type-code-2"></span>
+          </p>
+          <p class="card-text">
+            <strong>Crash Date: </strong> <span id="crash-date"></span>
+          </p>
+          <p class="card-text">
+            <strong>Crash Time: </strong> <span id="crash-time"></span>
+          </p>
+        </div>
+      </div>
+
+      <br />
+      <!-- Card -->
+    </div>
+  </div>
+</div>
